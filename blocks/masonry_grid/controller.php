@@ -37,7 +37,6 @@ class Controller extends BlockController
         $this->set("selectedFileSets", array_keys($this->getSelectedFileSets()));
     }
 
-
     public function edit()
     {
         $this->set("fileSets", $this->getAllAvailableFileSets());
@@ -48,6 +47,13 @@ class Controller extends BlockController
     {
         $this->set("fileSets", $this->getSelectedFileSets());
         $this->set("images", $this->getImages());
+    }
+
+    public function registerViewAssets($outputContent = '')
+    {
+        parent::registerViewAssets($outputContent);
+
+        $this->requireAsset("masonry-grid");
     }
 
     public function getSearchableContent(): string
@@ -68,6 +74,7 @@ class Controller extends BlockController
     public function delete()
     {
         /** @var Connection $db */
+        /** @noinspection PhpUnhandledExceptionInspection */
         $db = $this->app->make(Connection::class);
 
         /** @noinspection PhpUnhandledExceptionInspection */
@@ -83,6 +90,7 @@ class Controller extends BlockController
         parent::save($args);
 
         /** @var Connection $db */
+        /** @noinspection PhpUnhandledExceptionInspection */
         $db = $this->app->make(Connection::class);
 
         /** @noinspection PhpUnhandledExceptionInspection */
@@ -107,6 +115,7 @@ class Controller extends BlockController
         }
 
         /** @var $cache ExpensiveCache */
+        /** @noinspection PhpUnhandledExceptionInspection */
         $cache = $this->app->make(ExpensiveCache::class);
         $cacheItem = $cache->getItem('bitter_theme.masonry_grid.images_' . $this->getBlockIdentifier());
         $cacheItem->clear();
@@ -125,6 +134,7 @@ class Controller extends BlockController
         parent::duplicate($newBID);
 
         /** @var Connection $db */
+        /** @noinspection PhpUnhandledExceptionInspection */
         $db = $this->app->make(Connection::class);
 
         foreach ($this->getSelectedFileSets() as $fileSetId => $fileSetName) {
@@ -142,18 +152,17 @@ class Controller extends BlockController
         }
     }
 
-    /**
-     * @return array
-     */
     private function getSelectedFileSets(): array
     {
         $fileSets = [];
 
         /** @var Connection $db */
+        /** @noinspection PhpUnhandledExceptionInspection */
         $db = $this->app->make(Connection::class);
 
         /** @noinspection SqlDialectInspection */
         /** @noinspection SqlNoDataSourceInspection */
+        /** @noinspection PhpDeprecationInspection */
         $rows = $db->fetchAll(
             "SELECT fileSetId FROM btMasonryGridFileSets WHERE bID = ?",
             [
@@ -233,7 +242,7 @@ class Controller extends BlockController
                         "url" => $fileObject->getURL(),
                         "width" => (int)$fileObject->getAttribute('width'),
                         "height" => (int)$fileObject->getAttribute('height'),
-                        "ratio" => (int)$fileObject->getAttribute('width') / (int)$fileObject->getAttribute('height'),
+                        "ratio" => (int)$fileObject->getAttribute('height') > 0 ? (int)$fileObject->getAttribute('width') / (int)$fileObject->getAttribute('height') : 1,
                         "fileSets" => [$fileSetId],
                         "thumbnail" => $imageUrl
                     ];
