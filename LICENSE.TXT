@@ -1,7 +1,23 @@
-Copyright 2024 Fabian Bitter
+LICENSE
 
-Permission is hereby granted, free of charge, to any person obtaining a copy of this software and associated documentation files (the "Software"), to deal in the Software without restriction, including without limitation the rights to use, copy, modify, merge, publish, distribute, sublicense, and/or sell copies of the Software, and to permit persons to whom the Software is furnished to do so, subject to the following conditions:
+This Concrete CMS add-on was developed by Fabian Bitter and includes the Isotope layout library by Metafizzy.
 
-The above copyright notice and this permission notice shall be included in all copies or substantial portions of the Software.
+Please note: While this add-on is provided free of charge, it includes Isotope, which is subject to its own commercial license.  
+By using this add-on, you agree to fully comply with the Isotope license terms.  
+For details, see: https://isotope.metafizzy.co/#commercial-license
 
-THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY, FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM, OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE SOFTWARE.
+Use of this add-on does NOT grant you a commercial license for Isotope.  
+If your use case requires a commercial license (e.g., usage in commercial websites, client work, SaaS products, or any revenue-generating context), you must purchase the appropriate license from Metafizzy.
+
+---
+
+MIT License
+
+Copyright (c) 2025 Fabian Bitter
+
+Permission is hereby granted, free of charge, to any person obtaining a copy of this software and associated documentation files (the “Software”), to deal in the Software without restriction, including without limitation the rights to use, copy, modify, merge, publish, distribute, sublicense, and/or sell copies of the Software, subject to the following conditions:
+
+- The above copyright notice and this permission notice shall be included in all copies or substantial portions of the Software.
+- This add-on includes Isotope, which is licensed separately. Users must comply with the Isotope license terms at https://isotope.metafizzy.co/#commercial-license
+
+THE SOFTWARE IS PROVIDED “AS IS”, WITHOUT WARRANTY OF ANY KIND, EXPRESS OR IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY, FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM, OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE SOFTWARE.
