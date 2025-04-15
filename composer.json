@@ -1,5 +1,10 @@
 {
   "name": "bitterdev/masonry_grid",
   "type": "concrete5-package",
-  "description": "Display multiple file sets in a stylish, filterable masonry grid."
+  "description": "Display multiple file sets in a stylish, filterable masonry grid.",
+  "autoload": {
+    "psr-4": {
+      "Bitter\\MasonryGrid\\": "src/Bitter/MasonryGrid"
+    }
+  }
 }
