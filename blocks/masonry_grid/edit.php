@@ -9,6 +9,9 @@ defined('C5_EXECUTE') or die('Access denied');
 /** @var array $selectedFileSets */
 
 View::element("dashboard/help_blocktypes", [], "masonry_grid");
+
+/** @noinspection PhpUnhandledExceptionInspection */
+View::element("dashboard/did_you_know", [], "masonry_grid");
 ?>
 
 <?php if (count($fileSets) === 0): ?>
